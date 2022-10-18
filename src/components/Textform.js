@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Textform(props) {
-    const [text, settext] = useState('Hide your Wife ,I got a Knive');  // state
+    const [text, settext] = useState('');  // state
 
     const handleUptext = () => {
         let newText = text.toUpperCase();
