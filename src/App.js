@@ -1,15 +1,15 @@
 //import logo from './logo.svg';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import Alert from './components/Alert';
 import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 
 function App() { //this will return only one component
@@ -41,18 +41,19 @@ function App() { //this will return only one component
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextUtils" Home="Home" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className='container'>
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/" element={<Textform mode={mode} showAlert={showAlert} />} />
-          </Routes>
+        <Textform mode={mode} showAlert={showAlert} />
+          {/* <Routes> */}
+            {/* <Route path="/about" element={<About />} />
+            <Route path="/" element={<Textform mode={mode} showAlert={showAlert} />} /> */}
+          {/* </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
-
+  
     // fragment tag under this we can have multiple component <></>
     //component -> A collection of tags under a tag 
     // <>
